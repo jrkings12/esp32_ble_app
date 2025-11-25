@@ -16,12 +16,12 @@ class _SplashScreenState extends State<SplashScreen> {
     startTime();
   }
 
-  startTime() async {
-    var duration = const Duration(seconds: 3);
+  Future<Timer> startTime() async {
+    var duration = const Duration(seconds: 6);
     return Timer(duration, navigateToDeviceScreen);
   }
 
-  navigateToDeviceScreen() {
+  void navigateToDeviceScreen() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => const SelectScreen2()),
@@ -54,6 +54,17 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+
+            const Text(
+              "(Blood Ancohol Concentration)",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+
           ],
         ),
       ),
